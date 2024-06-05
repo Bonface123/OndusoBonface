@@ -15,6 +15,8 @@
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
+            margin: 0;
+            padding-top: 60px; /* For fixed header */
         }
         header {
             background-color: #444;
@@ -71,23 +73,23 @@
             gap: 20px;
             margin-top: 40px;
         }
-        .skill {
+        .skill, .service {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        .skill:hover {
+        .skill:hover, .service:hover {
             transform: translateY(-5px);
         }
-        .skill i {
+        .skill i, .service i {
             font-size: 40px;
             margin-bottom: 10px;
             display: block;
             color: #007bff;
         }
-        .skill h3 {
+        .skill h3, .service h3 {
             font-size: 20px;
             margin: 0;
             color: #333;
@@ -144,21 +146,18 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Onduso Bonface -Software Developer</h1>
+            <h1>Onduso Bonface</h1>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -211,6 +210,44 @@
         </div>
     </section>
 
+    <section id="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="skills-grid">
+                <div class="service">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Creating responsive and dynamic websites using modern technologies.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile App Development</h3>
+                    <p>Building user-friendly and efficient mobile applications for iOS and Android.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Computing</h3>
+                    <p>Implementing cloud solutions to enhance scalability and performance.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Management</h3>
+                    <p>Designing and managing databases to ensure data integrity and efficiency.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Cybersecurity</h3>
+                    <p>Providing security solutions to protect systems from cyber threats.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-search"></i>
+                    <h3>SEO Optimization</h3>
+                    <p>Improving website visibility and search engine rankings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
@@ -222,13 +259,13 @@
                     <a href="#" class="btn">View Project</a>
                 </div>
                 <div class="project">
-                    <img src="images/project3.png" alt="Project 2">
+                    <img src="images/project2.webp" alt="Project 2">
                     <h3>Social Media Dashboard</h3>
                     <p>An interactive dashboard for managing and analyzing social media data from various platforms.</p>
                     <a href="#" class="btn">View Project</a>
                 </div>
                 <div class="project">
-                    <img src="images/project2.webp" alt="Project 3">
+                    <img src="images/project3.png" alt="Project 3">
                     <h3>E-commerce Website</h3>
                     <p>A fully functional e-commerce website with features like product listings, shopping cart, and secure checkout.</p>
                     <a href="#" class="btn">View Project</a>
