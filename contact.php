@@ -1,47 +1,41 @@
 <?php
-$servername = "localhost"; // Change this to your database server name
-$username = "root"; // Change this to your database username
-$password = ""; // Change this to your database password
-$dbname = "contact_form"; // The name of the database we created
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars(trim($_POST["name"]));
-    $email = htmlspecialchars(trim($_POST["email"]));
-    $message = htmlspecialchars(trim($_POST["message"]));
+// 1. Include PHPMailer using Composer's autoloader (assuming you've installed PHPMailer)
+require 'vendor/autoload.php';
 
-    // Input validation
-    if (empty($name) || empty($email) || empty($message)) {
-        echo json_encode(["success" => false, "message" => "All fields are required."]);
-        exit;
-    }
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo json_encode(["success" => false, "message" => "Invalid email format."]);
-        exit;
-    }
+// 2. Create a new PHPMailer instance (optional: enable exceptions)
+$mail = new PHPMailer(true);
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+// 3. Configure Email Settings (replace with your details)
+$mail->isSMTP();                                            // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';                           // Specify your SMTP server address
+$mail->SMTPAuth = true;                                         // Enable SMTP authentication
+$mail->Username = 'ondusobonface9@gmail.com';                   // Your SMTP username
+$mail->Password = 'uzfa dwmr vezu adkh';                             // Your SMTP password
+//$mail->SMTPSecure = 'ssl';                 // Optional, set encryption if needed
+$mail->Port = 25;                                             // Replace with your SMTP server port (usually 587)
 
-    // Check connection
-    if ($conn->connect_error) {
-        echo json_encode(["success" => false, "message" => "Database connection failed: " . $conn->connect_error]);
-        exit;
-    }
+// 4. Set Sender Details
+$mail->setFrom('ondusobonface9@gmail.com', 'Bonface Onduso');       // Sender's email address and name
 
-    // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO messages (name, email, message) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $message);
+// 5. Add Recipient(s)
+$mail->addAddress($_POST ["email"]);            // Recipient's email address (can add more with addAddress())
 
-    if ($stmt->execute()) {
-        echo json_encode(["success" => true, "message" => "Message sent successfully."]);
-    } else {
-        echo json_encode(["success" => false, "message" => "Failed to send message. Please try again later."]);
-    }
+// 6. Set Email Subject and Body
+$mail->Subject = ' "Inquiry from Bonface Onduso Personal Website';              // Email subject line
+$mail->Body = 'Client Confirmation Message.'; // Plain text email body
+$mail->isHTML(true);                                           // Set email format to HTML (optional)
 
-    $stmt->close();
-    $conn->close();
+// 7. Optional: Set Alternative Text for Plain Text Clients
+$mail->AltBody = 'This is the plain text version of the email body.'; // Optional for non-HTML clients
+
+// 8. Send the Email and Handle Response
+if ($mail->send()) {
+    echo 'Message has been sent successfully!';
 } else {
-    echo json_encode(["success" => false, "message" => "Invalid request method."]);
+    echo 'Error sending message: ' . $mail->ErrorInfo;
 }
-?>
