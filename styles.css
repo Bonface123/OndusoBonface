@@ -1,100 +1,254 @@
-body {
-    font-family: 'Arial', sans-serif;
+/* Normalize default browser styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  /* Remove default list styles */
+  ul {
+    list-style: none;
+  }
+  
+  /* Remove default link styles */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color:#333; /* Dark Blue background */
+    color: #fff; /* White text for readability */
+    /* Animation for smooth page load */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  /* styles.css */
+
+h1 {
     text-align: center;
-}
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
+    font-size: 28px; /* Adjust font size as needed */
+    font-weight: 700;
+  }
+  
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 15px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  header {
+    background-color: #2F80ED;
+    padding: 10px 0;
+  }
+  
+  nav ul {
     display: flex;
     justify-content: center;
-}
-nav ul li {
-    margin: 0 15px;
-}
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-section {
-    padding: 20px 0;
-    margin: 20px 0;
-}
-.profile {
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  section {
+    margin-bottom: 50px;
+  }
+  
+  section:nth-child(even) {
+    background-color: #333;
+  }
+  .profile {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-.profile-pic {
+    margin-bottom: 30px;
+  }
+  
+  .profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin-right: 20px;
+  }
+  .skills-grid,
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
-.profile-info {
-    max-width: 600px;
-}
-.profile-info h2 {
-    margin-top: 0;
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-.skills-grid, .projects-grid {
+
+/* styles.css */
+
+/* Skills section styles */
+/* styles.css */
+
+/* Services section styles */
+#services {
+    background-color: #222; /* Dark background color */
+    padding: 40px 0;
+  }
+  
+  .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
     gap: 20px;
-}
-.skill, .project {
-    background-color: #fff;
+    text-align: center;
+  }
+  
+  .service {
+    background-color: #333; /* Slightly lighter than the background */
+    border-radius: 8px;
     padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.skill i, .project img {
-    font-size: 3em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out; /* Add hover effect transition */
+  }
+  
+  .service i {
+    font-size: 24px;
     margin-bottom: 10px;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-}
-form input, form textarea {
+    color: #007bff; /* Customize the icon color */
+  }
+  
+  .service h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff; /* Light text color */
+  }
+  
+  .service p {
+    font-size: 14px;
+    color: #ccc; /* Lighter text color */
+  }
+  
+  /* Hover effect for services */
+  .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+.project {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.2s ease-in-out; /* Add hover effect transition */
+  }
+  
+  .project img {
+    width: 100%; /* Fixed image width */
+    height: 200px; /* Example fixed image height */
+    object-fit: cover; /* Crop image to fit within the container */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    margin-bottom: 10px; /* Add spacing below image */
+  }
+  
+ /* Projects Section Styling */
+
+ .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+ }
+  
+ .project {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    transition: all 5s ease-in-out; /* Add hover effect transition */
+    cursor: pointer; /* Show pointer cursor on hover */
+  }
+  
+  .project img {
     width: 100%;
+    height: 200px; /* Example fixed image height */
+    object-fit: cover; /* Crop image to fit within the container */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    margin-bottom: 10px;
+  }
+  
+  .project:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .project h3 {
+    margin-bottom: 5px;
+  }
+  
+  .project p {
+    margin-bottom: 10px;
+    line-height: 1.2; /* Adjust line height for better readability */
+  }
+  
+  .project a.btn {
+    margin-top: auto; /* Align button at the bottom */
+  }
+  
+  #contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #contactForm input,
+  #contactForm textarea {
     padding: 10px;
-    margin: 10px 0;
     border: 1px solid #ccc;
-}
-form button {
-    background-color: #333;
+    border-radius: 5px;
+  }
+  footer {
+    background-color: #444;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-links {
+    margin-bottom: 10px;
+  }
+  
+  /* styles.css */
+
+/* Footer link styles */
+.footer-links a {
+    text-decoration: none;
     color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
+    transition: color 0.2s ease-in-out;
+    cursor: pointer; /* Add cursor pointer to indicate clickability */
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Add transition for color and transform */
+  cursor: pointer;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+    transform: translateY(-2px); /* Add a slight upward lift on hover */
+  }
+  
+  
+  
+
+  
