@@ -27,8 +27,8 @@ $mail->setFrom('ondusobonface9@gmail.com', 'Bonface Onduso');       // Sender's 
 $mail->addAddress($_POST ["email"]);            // Recipient's email address (can add more with addAddress())
 
 // 6. Set Email Subject and Body
-$mail->Subject = ' "Inquiry from Bonface Onduso Personal Website';              // Email subject line
-$mail->Body = 'Client Confirmation Message.'; // Plain text email body
+$mail->Subject = ' "Client Inquiry from Bonface Onduso Personal Website';              // Email subject line
+$mail->Body = 'This is to inform you that some client has made an appointment with you through Onduso Bonface Personal Website.'; // Plain text email body
 $mail->isHTML(true);                                           // Set email format to HTML (optional)
 
 // 7. Optional: Set Alternative Text for Plain Text Clients
