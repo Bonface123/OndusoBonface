@@ -13,7 +13,7 @@
   /* Remove default link styles */
   a {
     text-decoration: none;
-    color: inherit;
+    color:black;
   }
   body {
     font-family: Arial, sans-serif;
@@ -64,8 +64,9 @@ h1 {
     cursor: pointer;
   }
   header {
-    background-color: #2F80ED;
+    background-color:darkblue ;
     padding: 10px 0;
+    
   }
   
   nav ul {
@@ -121,7 +122,7 @@ h1 {
   }
   
   .service {
-    background-color: #333; /* Slightly lighter than the background */
+    background-color: #222; /* Slightly lighter than the background */
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
