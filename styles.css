@@ -64,9 +64,11 @@ h1 {
     cursor: pointer;
   }
   header {
-    background-color:#007bff ;
-    padding: 10px 0;
-    
+    text-align: center;
+    padding: 20px;
+    background-color: #0056b3; /* Light blue color for the header background */
+    color: white; /* Text color set to white for better contrast */
+    border-bottom: 1px solid #ddd;
   }
   
   nav ul {
