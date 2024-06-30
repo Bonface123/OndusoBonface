@@ -50,12 +50,16 @@
           <div class="profile-info">
             <h2>About Me</h2>
             <p>
-              👋 Hi there! I’m Onduso Bonface, a passionate and results-driven
-               software developer. With a solid foundation in computer science, 
-               I’m currently sharpening my skills in full-stack web development 
-               and creating scalable applications. I thrive on solving complex problems
-                and love collaborating with others.
-            </p>
+              👋 Hi there! I’m Onduso Bonface, a passionate and results-driven software 
+              developer. With a solid foundation in computer science, I specialize in 
+              full-stack web development and creating scalable applications. My favorite 
+              technologies include PHP, JavaScript, and Python. As a designer, I also have 
+              an eye for creating visually appealing user interfaces and delightful user
+               experiences. My problem-solving skills are top-notch, and I thrive on collaborating
+                with others to build innovative solutions.
+          </p>
+          
+          
             <a href="#contact" class="btn">Contact Me</a>
           </div>
         </div>
@@ -64,43 +68,48 @@
 
     <section id="skills">
       <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill">
-            <i class="fab fa-html5"></i>
-            <h3>HTML</h3>
+          <h2>Skills</h2>
+          <div class="skills-grid">
+              <div class="skill">
+                  <i class="fab fa-html5"></i>
+                  <h3>HTML</h3>
+              </div>
+              <div class="skill">
+                  <i class="fab fa-css3-alt"></i>
+                  <h3>CSS</h3>
+              </div>
+              <div class="skill">
+                  <i class="fab fa-js"></i>
+                  <h3>JavaScript</h3>
+              </div>
+              <div class="skill">
+                  <i class="fab fa-react"></i>
+                  <h3>React</h3>
+              </div>
+              <div class="skill">
+                  <i class="fab fa-node-js"></i>
+                  <h3>Node.js</h3>
+              </div>
+              <div class="skill">
+                  <i class="fab fa-python"></i>
+                  <h3>Python</h3>
+              </div>
+              <div class="skill">
+                  <i class="fab fa-java"></i>
+                  <h3>Java</h3>
+              </div>
+              <div class="skill">
+                  <i class="fas fa-database"></i>
+                  <h3>SQL</h3>
+              </div>
+              <div class="skill">
+                  <i class="fab fa-php"></i>
+                  <h3>PHP</h3>
+              </div>
           </div>
-          <div class="skill">
-            <i class="fab fa-css3-alt"></i>
-            <h3>CSS</h3>
-          </div>
-          <div class="skill">
-            <i class="fab fa-js"></i>
-            <h3>JavaScript</h3>
-          </div>
-          <div class="skill">
-            <i class="fab fa-react"></i>
-            <h3>React</h3>
-          </div>
-          <div class="skill">
-            <i class="fab fa-node-js"></i>
-            <h3>Node.js</h3>
-          </div>
-          <div class="skill">
-            <i class="fab fa-python"></i>
-            <h3>Python</h3>
-          </div>
-          <div class="skill">
-            <i class="fab fa-java"></i>
-            <h3>Java</h3>
-          </div>
-          <div class="skill">
-            <i class="fas fa-database"></i>
-            <h3>SQL</h3>
-          </div>
-        </div>
       </div>
-    </section>
+  </section>
+  
 
     <section id="services">
       <div class="container">
@@ -234,32 +243,5 @@
         <p>&copy; 2024 Onduso Bonface. All Rights Reserved.</p>
       </div>
     </footer>
-
-    <!-- <script>
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          const formData = new FormData(this);
-
-          fetch("contact.php", {
-            method: "POST",
-            body: formData,
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              const formResponse = document.getElementById("formResponse");
-              formResponse.innerHTML = data.message;
-              if (data.success) {
-                formResponse.style.color = "green";
-              } else {
-                formResponse.style.color = "red";
-              }
-            })
-            .catch((error) => {
-              console.error("Error:", error);
-            });
-        });
-    </script> -->
   </body>
 </html>
