@@ -261,6 +261,8 @@ h1 {
   
   .project a.btn {
     margin-top: auto; /* Align button at the bottom */
+    border-radius: 5px; /* Adjust the border radius */
+    border: none;
   }
   
   #contactForm {
