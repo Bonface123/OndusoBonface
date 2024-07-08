@@ -13,13 +13,13 @@
   /* Remove default link styles */
   a {
     text-decoration: none;
-    color:white;
+    color:goldenrod;
   }
   body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background-color:#444; /* Dark Blue background */
+    background-color:black; /* Dark Blue background */
     color: #fff; /* White text for readability */
     /* Animation for smooth page load */
     opacity: 0;
@@ -66,7 +66,7 @@ h1 {
   header {
     text-align: center;
     padding: 20px;
-    background-color: #0056b3; /* Light blue color for the header background */
+    background-color: #007bff; /* Light blue color for the header background */
     color: white; /* Text color set to white for better contrast */
     border-bottom: 1px solid #ddd;
   }
@@ -84,7 +84,7 @@ h1 {
   }
   
   section:nth-child(even) {
-    background-color: #444;
+    background-color: black;
   }
   .profile {
     display: flex;
@@ -113,7 +113,7 @@ h1 {
 
 /* Services section styles */
 #services {
-    background-color:#444; /* Dark background color */
+    background-color:black; /* Dark background color */
     padding: 40px 0;
   }
   
@@ -227,7 +227,7 @@ h1 {
     border-radius: 5px;
   }
   footer {
-    background-color:  #222;
+    background-color: slategray;
     padding: 20px 0;
     text-align: center;
   }
