@@ -89,7 +89,7 @@ h1 {
     color: white; /* Text color set to white for better contrast */
     border-bottom: 1px solid #ddd;
     font-family: 'Arial', sans-serif;
-    font-size: 24px;
+    font: size 18px;;
     margin: 0;
     padding: 20px 0; /* Top and bottom padding */
     display: flex;
