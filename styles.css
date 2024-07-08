@@ -14,6 +14,10 @@
   a {
     text-decoration: none;
     color:gold;
+     hover {
+      color: white;
+      transform: translateY(-2px); /* Add a slight upward lift on hover */
+    }
   }
   body {
     font-family: Arial, sans-serif;
