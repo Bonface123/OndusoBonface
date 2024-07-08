@@ -75,7 +75,7 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Arial', sans-serif; /* Specify font family */
-    font-size: 20px; /* Set font size */
+    font-size: 24px; /* Set font size */
   }
   .btn:hover {
     color:darkblue; /* Change to a different color on hover */
