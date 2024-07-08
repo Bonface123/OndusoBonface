@@ -12,13 +12,21 @@
   
   /* Remove default link styles */
   a {
-    text-decoration: none;
+    text-decoration:none;
     color:gold;
-     hover {
-      color: white;
-      transform: translateY(-2px); /* Add a slight upward lift on hover */
     }
-  }
+    /* Apply hover effect to links within the header */
+header a {
+  color:  #ffcc00; /* Default link color */
+  text-decoration:none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Change link color on hover */
+header a:hover {
+  color:darkblue; /* Change to a different color on hover */
+}
+
   body {
     font-family: Arial, sans-serif;
     font-size: 16px;
@@ -61,18 +69,33 @@ h1 {
   .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color:#007bff;
+    color:#ffcc00;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'Arial', sans-serif; /* Specify font family */
+    font-size: 20px; /* Set font size */
   }
+  .btn:hover {
+    color:darkblue; /* Change to a different color on hover */
+  }
+  
+
   header {
     text-align: center;
     padding: 20px;
     background-color: #007bff; /* Light blue color for the header background */
     color: white; /* Text color set to white for better contrast */
     border-bottom: 1px solid #ddd;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 20px 0; /* Top and bottom padding */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+
   }
   
   nav ul {
@@ -245,7 +268,7 @@ h1 {
 /* Footer link styles */
 .footer-links a {
     text-decoration: none;
-    color:#007bff;
+    color:goldenrod;
     transition: color 0.2s ease-in-out;
     cursor: pointer; /* Add cursor pointer to indicate clickability */
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Add transition for color and transform */
@@ -253,7 +276,7 @@ h1 {
   }
   
   .footer-links a:hover {
-    color: white;
+    color:#007bff;
     transform: translateY(-2px); /* Add a slight upward lift on hover */
   }
   
