@@ -241,7 +241,7 @@ h1 {
 /* Footer link styles */
 .footer-links a {
     text-decoration: none;
-    color: #fff;
+    color:#007bff;
     transition: color 0.2s ease-in-out;
     cursor: pointer; /* Add cursor pointer to indicate clickability */
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Add transition for color and transform */
@@ -249,7 +249,7 @@ h1 {
   }
   
   .footer-links a:hover {
-    color: #007bff;
+    color: white;
     transform: translateY(-2px); /* Add a slight upward lift on hover */
   }
   
