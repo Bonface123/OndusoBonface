@@ -70,7 +70,7 @@ h1 {
     display: inline-block;
     padding: 10px 20px;
     background-color:#007bff;
-    color:goldenrod;
+    color:#fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -86,7 +86,7 @@ h1 {
     text-align: center;
     padding: 20px;
     background-color: #007bff; /* Light blue color for the header background */
-    color: white; /* Text color set to white for better contrast */
+    color:#ffcc00; /* Text color set to white for better contrast */
     border-bottom: 1px solid #ddd;
     font-family: 'Arial', sans-serif;
     font: size 18px;;
