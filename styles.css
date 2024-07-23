@@ -13,18 +13,18 @@
   /* Remove default link styles */
   a {
     text-decoration:none;
-    color:gold;
+    color:#007bff;
     }
     /* Apply hover effect to links within the header */
 header a {
-  color:  #ffcc00; /* Default link color */
+  color:#fff; /* Default link color */
   text-decoration:none; /* Remove underline */
   transition: color 0.3s; /* Smooth transition for color change */
 }
 
 /* Change link color on hover */
 header a:hover {
-  color:darkblue; /* Change to a different color on hover */
+  color:rgb(146, 108, 12); /* Change to a different color on hover */
 }
 
   body {
@@ -68,44 +68,62 @@ h1 {
   
   .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color:#007bff;
-    color:#fff;
+    padding: 12px 24px; /* Adjusted padding for better balance */
+    background-color:  #007bff; /* A more vibrant green */
+    color: white; /* Better contrast for readability */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Arial', sans-serif; /* Specify font family */
-    font-size: 20px; /* Set font size */
-  }
-  .btn:hover {
-    color:darkblue; /* Change to a different color on hover */
-  }
-  
-
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #007bff; /* Light blue color for the header background */
-    color:#fff; /* Text color set to white for better contrast */
-    border-bottom: 1px solid #ddd;
     font-family: 'Arial', sans-serif;
-    font: size 18px;;
-    margin: 0;
-    padding: 20px 0; /* Top and bottom padding */
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+    font-size: 18px; /* Slightly smaller font size for better proportion */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
 
-  }
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+    color:#007bff; /* Change to a different color on hover */
+}
+
+
+header {
+  background-color: black;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:#007bff;
+}
+
+ 
   
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
   
-  nav li {
-    margin-right: 20px;
-  }
   section {
     margin-bottom: 50px;
   }
@@ -113,18 +131,54 @@ h1 {
   section:nth-child(even) {
     background-color: black;
   }
-  .profile {
+ .profile {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
-  }
-  
-  .profile-pic {
+}
+
+.profile-pic {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-right: 20px;
-  }
+    margin-bottom: 20px;
+    border: 5px solid grey  ;
+}
+
+.profile-info {
+    text-align: center; /* Center the text within the profile-info div */
+}
+
+.profile-info h2 {
+    margin-top: 0; /* Remove any default margin from the top */
+}
+
+.profile-info p {
+    margin: 10px 0; /* Add some margin for spacing */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color:green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px; /* Add some space above the button */
+}
+
+.btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
   .skills-grid,
 .services-grid {
   background-color:#222;
@@ -175,7 +229,7 @@ h1 {
   
   .service {
     background-color: #222; /* Slightly lighter than the background */
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 20px;
     box-shadow: 0 2px 4px  #444(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out; /* Add hover effect transition */
@@ -261,8 +315,9 @@ h1 {
   
   .project a.btn {
     margin-top: auto; /* Align button at the bottom */
-    border-radius: 5px; /* Adjust the border radius */
+    border-radius: 3px; /* Adjust the border radius */
     border: none;
+    
   }
   
   #contactForm {
@@ -278,7 +333,7 @@ h1 {
     border-radius: 5px;
   }
   footer {
-    background-color: #444;
+    background-color: green;
     padding: 20px 0;
     text-align: center;
   }
@@ -292,7 +347,7 @@ h1 {
 /* Footer link styles */
 .footer-links a {
     text-decoration: none;
-    color:goldenrod;
+    color:#007bff;
     transition: color 0.2s ease-in-out;
     cursor: pointer; /* Add cursor pointer to indicate clickability */
     transition: color 0.2s ease-in-out, transform 0.2s ease-in-out; /* Add transition for color and transform */
@@ -300,7 +355,7 @@ h1 {
   }
   
   .footer-links a:hover {
-    color:#007bff;
+    color:darkblue;
     transform: translateY(-2px); /* Add a slight upward lift on hover */
   }
   
