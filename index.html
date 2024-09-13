@@ -43,7 +43,7 @@
       <div class="container">
         <div class="profile">
           <img
-            src="images/Bonnie.png"
+            src="images/Bonface.png"
             alt="Onduso Bonface"
             class="profile-pic"
           />
@@ -208,15 +208,10 @@
     <section id="contact">
       <div class="container">
         <h2>Contact</h2>
-        <form action="contact.php" method="post" id="contactForm">
+        <form action="https://formspree.io/f/xkgwarar" method="POST" id="contactForm">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
           <button type="submit" name="send">Send</button>
         </form>
         <div id="formResponse"></div>
