@@ -14,6 +14,24 @@ body {
   padding-top: 80px; /* Account for fixed header */
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add fade-in to all sections */
+section {
+  animation: fadeIn 0.5s ease-in forwards;
+}
+
+/* Container */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -36,7 +54,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 10px 20px; /* Add padding for spacing */
 }
 
 header h1 {
@@ -44,16 +62,28 @@ header h1 {
   font-size: 1.8rem;
 }
 
+/* Updated Navigation Styles */
+header nav {
+  display: flex; /* Enable flexbox on nav */
+  align-items: center; /* Center align items */
+}
+
 header nav ul {
   list-style: none;
-  display: flex;
-  gap: 20px;
+  display: flex; /* Keep items in a row */
+  gap: 20px; /* Space between links */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+header nav ul li {
+  margin: 0; /* Remove margin for horizontal layout */
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 8px 15px; /* Add padding for links */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -63,11 +93,43 @@ header nav ul li a:hover {
   color: #fff;
 }
 
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: row; /* Keep items in a row on small screens */
+    align-items: center; /* Center align items */
+    justify-content: space-between; /* Space out items */
+  }
+
+  header nav {
+    align-items: center; /* Center align nav items */
+  }
+
+  header nav ul {
+    flex-direction: row; /* Ensure nav items are horizontal */
+  }
+
+  header nav ul li {
+    margin: 0; /* Ensure no margin between items */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Smaller heading size for mobile devices */
+  }
+
+  header nav ul li a {
+    padding: 10px; /* Slightly larger padding for touch targets */
+  }
+}
+
+
 /* About Section */
 #about {
   background-color: #111; /* Darker section background */
   padding: 60px 0;
-  text-align: center;
+  text-align: justify;
   border-bottom: 1px solid #444; /* Section separation */
 }
 
@@ -109,19 +171,20 @@ header nav ul li a:hover {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for scaling effect */
 }
 
 .btn:hover {
   background-color: #0056b3; /* Darker button hover */
+  transform: scale(1.05); /* Slight scale on hover */
 }
 
 /* Skills Section */
 .skills-grid {
   background-color: #222; /* Dark background for skills */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Reduced gap */
   align-items: center;
   justify-items: center;
   padding: 40px; /* More padding for breathing space */
@@ -135,7 +198,7 @@ header nav ul li a:hover {
   align-items: center;
   text-align: center;
   color: #fff;
-  padding: 20px;
+  padding: 15px; /* Adjusted padding */
   background-color: #1a1a1a; /* Slightly darker for card effect */
   border-radius: 8px;
   transition: transform 0.3s, background-color 0.3s;
@@ -143,27 +206,18 @@ header nav ul li a:hover {
 
 .skill:hover {
   background-color: #333; /* Hover background color */
-  transform: translateY(-10px); /* Lift on hover */
+  transform: translateY(-5px) scale(1.05); /* Slight lift and scale on hover */
 }
 
 .skill i {
-  font-size: 3.5rem; /* Increase icon size */
-  margin-bottom: 15px; /* More space below icon */
+  font-size: 2.5rem; /* Reduced icon size */
+  margin-bottom: 10px; /* More space below icon */
   color: #007bff; /* Icon color */
 }
 
 .skill h3 {
-  font-size: 1.4rem; /* Larger text */
+  font-size: 1.2rem; /* Adjusted text size */
   margin: 0;
-}
-
-.container h2 {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #007bff; /* Underline for title */
-  display: inline-block; /* Make the underline tighter */
-  padding-bottom: 10px;
 }
 
 /* Services Section */
@@ -175,8 +229,8 @@ header nav ul li a:hover {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted min size for better fit */
+  gap: 20px; /* Reduced gap for a compact look */
   text-align: center;
 }
 
@@ -185,29 +239,29 @@ header nav ul li a:hover {
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
+}
+
+.service:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
 }
 
 .service i {
-  font-size: 2.5rem; /* Larger icons */
+  font-size: 2.5rem; /* Icon size adjusted for mobile-friendly display */
   margin-bottom: 15px;
   color: #007bff; /* Icon color */
 }
 
 .service h3 {
-  font-size: 1.6rem;
+  font-size: 1.5rem; /* Slightly smaller heading size for better fit */
   margin-bottom: 10px;
   color: #fff; /* White color for text */
 }
 
 .service p {
-  font-size: 1rem;
+  font-size: 0.9rem; /* Smaller paragraph size for readability */
   color: #ccc; /* Light gray for readability */
-}
-
-.service:hover {
-  transform: translateY(-10px); /* Hover effect */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow */
 }
 
 /* Projects Section Styling */
@@ -222,7 +276,7 @@ header nav ul li a:hover {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  transition: all 5s ease-in-out; /* Add hover effect transition */
+  transition: all 0.3s ease-in-out; /* Changed transition for smooth effect */
   cursor: pointer; /* Show pointer cursor on hover */
 }
 
@@ -231,11 +285,12 @@ header nav ul li a:hover {
   height: 200px; /* Example fixed image height */
   object-fit: cover; /* Crop image to fit within the container */
   border-radius: 5px 5px 0 0; /* Rounded top corners */
-  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth image hover transition */
 }
 
 .project:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  transform: scale(1.03); /* Slight scale effect on hover */
 }
 
 .project h3 {
@@ -251,7 +306,35 @@ header nav ul li a:hover {
   margin-top: auto; /* Align button at the bottom */
   border-radius: 3px; /* Adjust the border radius */
   border: none;
-  
+}
+
+/* Testimonial Section */
+.testimonial {
+  background-color: #222; /* Background color for the testimonial card */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added box-shadow transition */
+  text-align: center; /* Center align text */
+}
+
+.testimonial:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow on hover */
+}
+
+.testimonial-img {
+  width: 80px; /* Set a fixed width */
+  height: 80px; /* Set a fixed height */
+  border-radius: 50%; /* Circular image */
+  margin-bottom: 15px; /* Space between image and text */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between testimonials */
 }
 
 /* Contact Section */
@@ -280,6 +363,12 @@ header nav ul li a:hover {
   font-size: 1rem;
   background-color: #222; /* Input background */
   color: #fff; /* Input text */
+  transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: #007bff; /* Change border color on focus */
 }
 
 #contact button {
@@ -288,12 +377,13 @@ header nav ul li a:hover {
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for scaling effect */
   border-radius: 5px;
 }
 
 #contact button:hover {
   background-color: #0056b3;
+  transform: scale(1.05); /* Slight scale on hover */
 }
 
 /* Footer */
