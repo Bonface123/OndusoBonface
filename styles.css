@@ -71,7 +71,7 @@ header nav {
 header nav ul {
   list-style: none;
   display: flex; /* Keep items in a row */
-  gap: 2px; /* Space between links */
+  gap: 0px; /* Space between links */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
 }
@@ -83,7 +83,7 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 15px; /* Add padding for links */
+  padding: 4px 10px; /* Add padding for links */
   transition: background-color 0.3s, color 0.3s;
 }
 
