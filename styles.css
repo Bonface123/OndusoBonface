@@ -41,8 +41,8 @@ section {
 
 /* Header */
 header {
-  background-color: #1a1a1a; /* Darker background for header */
-  color: #fff;
+  background-color: #0d6efd; /* Lighter blue background for header */
+  color: #fff; /* White text */
   position: fixed;
   top: 0;
   width: 100%;
@@ -54,7 +54,7 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; /* Add padding for spacing */
+  padding: 5px 10px; /* Add padding for spacing */
 }
 
 header h1 {
@@ -71,7 +71,7 @@ header nav {
 header nav ul {
   list-style: none;
   display: flex; /* Keep items in a row */
-  gap: 0px; /* Space between links */
+  gap: 1px; /* Space between links */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
 }
@@ -81,17 +81,18 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: #fff; /* White color for links */
   text-decoration: none;
-  padding: 4px 10px; /* Add padding for links */
+  padding: 2px 5px; /* Add padding for links */
   transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px; /* Add rounded corners */
 }
 
 header nav ul li a:hover {
-  background-color: #007bff; /* Highlight color */
-  border-radius: 5px;
-  color: #fff;
+  background-color: #0056b3; /* Darker blue on hover */
+  color: #fff; /* Keep text color white */
 }
+
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
