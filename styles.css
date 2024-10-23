@@ -5,6 +5,28 @@
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+/* Default (Mobile) */
+.container {
+  padding: 10px;
+}
+
+/* Tablets and larger screens */
+@media (min-width: 768px) {
+  .container {
+      padding: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+      padding: 30px;
+  }
+}
+
 
 body {
   line-height: 1.6;
@@ -104,6 +126,7 @@ header nav ul li a:hover {
 
   header nav {
     align-items: center; /* Center align nav items */
+    align-items: center; /* Center align nav items */
   }
 
   header nav ul {
@@ -181,45 +204,72 @@ header nav ul li a:hover {
 }
 
 /* Skills Section */
+#skills {
+  padding: 50px 0; /* Padding for the section */
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Skills Grid */
 .skills-grid {
-  background-color: #222; /* Dark background for skills */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Reduced gap */
-  align-items: center;
-  justify-items: center;
-  padding: 40px; /* More padding for breathing space */
-  border-radius: 10px;
-  margin: 40px auto; /* Spacing between sections */
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px; /* Gap between skill cards */
+  max-width: 1200px; /* Width limit for grid */
+  margin: 0 auto; /* Center grid */
+  padding: 20px;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1a1a1a; /* Dark card background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Card shadow */
   color: #fff;
-  padding: 15px; /* Adjusted padding */
-  background-color: #1a1a1a; /* Slightly darker for card effect */
-  border-radius: 8px;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 .skill:hover {
-  background-color: #333; /* Hover background color */
-  transform: translateY(-5px) scale(1.05); /* Slight lift and scale on hover */
+  background-color: #007bff; /* Blue background on hover */
+  transform: translateY(-10px) scale(1.05); /* Larger lift effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .skill i {
-  font-size: 2.5rem; /* Reduced icon size */
-  margin-bottom: 10px; /* More space below icon */
-  color: #007bff; /* Icon color */
+  font-size: 3rem; /* Larger icon size */
+  margin-bottom: 15px; /* Extra space below icon */
+  color: #fff; /* White icon on hover */
 }
 
 .skill h3 {
-  font-size: 1.2rem; /* Adjusted text size */
+  font-size: 1.5rem;
+  font-weight: bold;
   margin: 0;
 }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    padding: 20px;
+  }
+
+  .skill {
+    padding: 30px;
+  }
+}
+
 
 /* Services Section */
 #services {
