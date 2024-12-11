@@ -63,7 +63,7 @@ section {
 
 /* Header */
 header {
-  background-color: #0d6efd; /* Lighter blue background for header */
+  background-color: #003366; /* Lighter blue background for header */
   color: #fff; /* White text */
   position: fixed;
   top: 0;
@@ -103,15 +103,16 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff; /* White color for links */
+ color:goldenrod; /* White text */
   text-decoration: none;
-  padding: 2px 5px; /* Add padding for links */
+  padding: 8px 12px; /* Add padding */
   transition: background-color 0.3s, color 0.3s;
-  border-radius: 5px; /* Add rounded corners */
+  border-radius: 5px;
+  font-weight: bold; /* Make links stand out */
 }
 
 header nav ul li a:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #003366; /* Darker blue on hover */
   color: #fff; /* Keep text color white */
 }
 
@@ -190,7 +191,7 @@ header nav ul li a:hover {
 
 .btn {
   display: inline-block;
-  background-color: #007bff; /* Primary button color */
+  background-color: #003366; /* Primary button color */
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
@@ -199,14 +200,14 @@ header nav ul li a:hover {
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Darker button hover */
+  background-color: #003366; /* Darker button hover */
   transform: scale(1.05); /* Slight scale on hover */
 }
 
 /* Skills Section */
 #skills {
   padding: 50px 0; /* Padding for the section */
-  background-color: #f4f4f4; /* Light background for contrast */
+  background-color: #000; /* Light background for contrast */
 }
 
 #skills h2 {
